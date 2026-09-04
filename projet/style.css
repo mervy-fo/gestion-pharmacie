@@ -1,0 +1,1880 @@
+/* =====================================
+   COULEURS PHARMASTOCK
+===================================== */
+
+:root {
+    --vert-pharmacie: #16A34A;
+    --bleu-medical: #2563EB;
+    --vert-normal: #22C55E;
+    --rouge-alerte: #DC2626;
+    --violet-peremption: #7C3AED;
+    --orange-stock: #F97316;
+    --jaune-surveillance: #EAB308;
+
+    --fond: #F8FAFC;
+    --texte: #1E293B;
+}
+
+
+/* =====================================
+   BODY
+===================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg,
+            #effdf4,
+            #eff6ff);
+
+    font-family: Arial, sans-serif;
+    color: var(--texte);
+}
+
+
+/* =====================================
+   CONTAINER
+===================================== */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* =====================================
+   CARTE DE CONNEXION
+===================================== */
+
+.login-card {
+
+    width: 100%;
+    max-width: 430px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+.logo-container h2 {
+
+    margin: 0;
+
+    font-weight: 700;
+
+    color: var(--vert-pharmacie);
+}
+
+
+.logo-container p {
+
+    margin-top: 5px;
+
+    color: #64748B;
+
+    font-size: 14px;
+}
+
+
+/* =====================================
+   LABELS
+===================================== */
+
+.form-label {
+
+    font-weight: 600;
+
+    color: #334155;
+}
+
+
+/* =====================================
+   INPUTS
+===================================== */
+
+.input-group-text {
+
+    background: #f1f5f9;
+
+    border-color: #dbe3ea;
+
+    color: var(--bleu-medical);
+}
+
+
+.form-control {
+
+    height: 48px;
+
+    border-color: #dbe3ea;
+}
+
+
+.form-control:focus {
+
+    border-color: var(--vert-pharmacie);
+
+    box-shadow:
+        0 0 0 0.2rem rgba(22, 163, 74, 0.15);
+}
+
+
+/* =====================================
+   BOUTON CONNEXION
+===================================== */
+
+.btn-login {
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--vert-pharmacie);
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.btn-login:hover {
+
+    background: #15803D;
+
+    color: white;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px rgba(22, 163, 74, 0.25);
+}
+
+
+/* =====================================
+   MOT DE PASSE OUBLIE
+===================================== */
+
+.forgot-password {
+
+    color: var(--bleu-medical);
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.forgot-password:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.login-footer {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+
+    font-size: 12px;
+
+    color: #64748B;
+}
+
+
+.login-footer i {
+
+    color: var(--vert-pharmacie);
+
+    margin-right: 5px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 480px) {
+
+    .login-card {
+
+        padding: 25px;
+
+    }
+
+}
+
+.btn-blanc {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-blanc:hover {
+    color: white;
+    text-decoration: none;
+
+}
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8fafc;
+}
+
+
+/* =========================================
+   STRUCTURE
+========================================= */
+
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    background: #033fbe;
+
+    border-right: 1px solid #e2e8f0;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+}
+
+
+/* Logo */
+
+.sidebar-logo {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fbfcfb;
+    color: #0e44b8;
+
+    font-size: 20px;
+}
+
+.sidebar-logo h4 {
+    margin: 0;
+
+    color: #fbfffd;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.sidebar-logo small {
+    color: #f3f5f8;
+
+    font-size: 11px;
+}
+
+
+/* Menu */
+
+.sidebar-menu {
+    padding: 20px 12px;
+
+    flex: 1;
+}
+
+.menu-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    position: relative;
+
+    padding: 12px 14px;
+
+    margin-bottom: 5px;
+
+    border-radius: 8px;
+
+    color: #f4f6f9;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.menu-item i {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+.menu-item:hover {
+    background: #6896f8;
+
+    color: #feffff;
+}
+
+.menu-item.active {
+    background: #6896f8;
+
+    color: #f9fcfa;
+
+    font-weight: 600;
+}
+
+
+/* Badge */
+
+.notification-badge {
+    margin-left: auto;
+
+    background: #DC2626;
+
+    color: white;
+
+    width: 21px;
+    height: 21px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+}
+
+
+/* Bas */
+
+.sidebar-bottom {
+    padding: 12px;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+.logout {
+    color: #DC2626;
+}
+
+.logout:hover {
+    background: #fef2f2;
+
+    color: #DC2626;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-content {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+    height: 80px;
+
+    background: #f8f8f8;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.topbar h5 {
+    color: #0a0a0a;
+
+    font-weight: 700;
+}
+
+.topbar small {
+    color: #4a4a4a;
+}
+
+.topbar-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* Notification */
+
+.icon-button {
+    border: none;
+
+    background: #f8fafc;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    color: #475569;
+
+    position: relative;
+}
+
+.icon-button span {
+    position: absolute;
+
+    top: -3px;
+    right: -3px;
+
+    background: #DC2626;
+
+    color: white;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Profil */
+
+.user-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #0e44b8;
+
+    color: #f8f9fb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile strong {
+    display: block;
+
+    font-size: 13px;
+}
+
+.user-profile small {
+    font-size: 11px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    padding: 30px;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.welcome-card {
+    background: linear-gradient(#0e44b8);
+
+    border-radius: 14px;
+
+    padding: 25px 30px;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.welcome-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+.welcome-card p {
+    margin: 0;
+
+    opacity: 0.9;
+
+    font-size: 14px;
+}
+
+.welcome-card>i {
+    font-size: 65px;
+
+    opacity: 0.2;
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.stat-card {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.stat-card span {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.stat-card h3 {
+    margin: 3px 0;
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   COULEURS
+========================================= */
+
+.blue {
+    background: #dbeafe;
+    color: #2563EB;
+}
+
+.green {
+    background: #dcfce7;
+    color: #16A34A;
+}
+
+.red {
+    background: #fee2e2;
+    color: #DC2626;
+}
+
+.orange {
+    background: #ffedd5;
+    color: #F97316;
+}
+
+.purple {
+    background: #ede9fe;
+    color: #7C3AED;
+}
+
+.yellow {
+    background: #fef9c3;
+    color: #EAB308;
+}
+
+
+/* Textes */
+
+.normal-text,
+.green-text {
+    color: #16A34A !important;
+}
+
+.red-text {
+    color: #DC2626 !important;
+}
+
+.orange-text {
+    color: #F97316 !important;
+}
+
+.purple-text {
+    color: #7C3AED !important;
+}
+
+.yellow-text {
+    color: #EAB308 !important;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.section-title {
+    margin-top: 30px;
+
+    margin-bottom: 15px;
+
+    color: #1e293b;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ALERT CARDS
+========================================= */
+
+.alert-card {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    border: 1px solid #e2e8f0;
+
+    border-left: 4px solid;
+}
+
+
+
+.alert-card-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.alert-icon {
+    width: 200px;
+    height: 40px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-card h2 {
+    margin: 15px 0 2px;
+
+    font-size: 27px;
+}
+
+.alert-card p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status,
+.badge-alert {
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.red-status {
+    background: #fee2e2;
+
+    color: #DC2626;
+}
+
+.purple-status {
+    background: #ede9fe;
+
+    color: #7C3AED;
+}
+
+.yellow-status {
+    background: #fef9c3;
+
+    color: #a16207;
+}
+
+.green-status {
+    background: #dcfce7;
+
+    color: #16A34A;
+}
+
+.orange-status {
+    background: #ffedd5;
+
+    color: #F97316;
+}
+
+
+/* =========================================
+   DASHBOARD CARD
+========================================= */
+
+.dashboard-card {
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    padding: 22px;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.card-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.card-title h5 {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+.card-title a {
+    color: #2563EB;
+
+    font-size: 12px;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   ALERT LIST
+========================================= */
+
+.alert-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.alert-row:last-child {
+    border-bottom: none;
+}
+
+.row-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-info {
+    flex: 1;
+}
+
+.alert-info strong {
+    display: block;
+
+    font-size: 13px;
+}
+
+.alert-info span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   MOUVEMENTS
+========================================= */
+
+.movement-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.movement-row:last-child {
+    border-bottom: none;
+}
+
+.movement-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.movement-row div:nth-child(2) {
+    flex: 1;
+}
+
+.movement-row strong {
+    display: block;
+
+    font-size: 13px;
+}
+
+.movement-row small {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.movement-quantity {
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+
+        width: calc(100% - 220px);
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        min-height: auto;
+    }
+
+    .dashboard-wrapper {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    .sidebar-menu {
+        display: none;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .topbar {
+        padding: 0 15px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .welcome-card>i {
+        display: none;
+    }
+
+}
+
+/* =========================================
+   ACTIONS RAPIDES
+========================================= */
+
+.quick-action {
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    padding: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #1e293b;
+
+    transition: all 0.2s ease;
+
+    height: 100%;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.quick-action:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #3716a3;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+
+    color: #1e293b;
+}
+
+
+.quick-action-icon {
+
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+.quick-action-content {
+
+    flex: 1;
+}
+
+
+.quick-action-content strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+
+.quick-action-content span {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+.quick-arrow {
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    transition: 0.2s;
+}
+
+
+.quick-action:hover .quick-arrow {
+
+    color: #16A34A;
+
+    transform: translateX(3px);
+}
+
+/* =========================================
+   PAGE MEDICAMENTS
+========================================= */
+
+.page-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.page-header h3 {
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #1e293b;
+}
+
+.page-header p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* Bouton pharmacie */
+
+.btn-pharma {
+    background: #2563EB;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.btn-pharma:hover {
+    background: #2563EB;
+
+    color: white;
+}
+
+
+/* =========================================
+   MINI STATISTIQUES
+========================================= */
+
+.mini-stat {
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    padding: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.mini-stat-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.mini-stat span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.mini-stat h4 {
+    margin: 3px 0 0;
+
+    font-size: 21px;
+}
+
+
+/* =========================================
+   BARRE OUTILS
+========================================= */
+.dashboard-card {
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.table-toolbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+.table-toolbar h5 {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+.table-toolbar small {
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* Recherche */
+
+.search-box {
+    position: relative;
+
+    width: 280px;
+}
+
+.search-box i {
+    position: absolute;
+
+    left: 13px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+}
+
+.search-box input {
+    width: 100%;
+
+    height: 40px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 8px;
+
+    padding: 0 12px 0 38px;
+
+    outline: none;
+
+    font-size: 12px;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.search-box input:focus {
+    border-color: #3011ab;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 163, 74, 0.08);
+}
+
+
+/* =========================================
+   TABLEAU MEDICAMENTS
+========================================= */
+
+.medicine-table {
+    vertical-align: middle;
+
+    margin-bottom: 0;
+}
+
+.medicine-table thead th {
+    background: #f8fafc;
+
+    color: #475569;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    padding: 13px 10px;
+
+    white-space: nowrap;
+}
+
+.medicine-table tbody td {
+    padding: 13px 10px;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.medicine-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* Nom médicament */
+
+.medicine-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #1e293b;
+}
+
+.medicine-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 8px;
+
+    background: #ceddfe;
+
+    color: #2563EB;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   ETATS MEDICAMENTS
+========================================= */
+
+.medicine-status {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.status-normal {
+    background: #dcfce7;
+
+    color: #16A34A;
+}
+
+.status-low {
+    background: #ffedd5;
+
+    color: #F97316;
+}
+
+.status-out {
+    background: #fee2e2;
+
+    color: #DC2626;
+}
+
+.status-purple {
+    background: #ede9fe;
+
+    color: #7C3AED;
+}
+
+.status-watch {
+    background: #fef9c3;
+
+    color: #a16207;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.btn-action-edit {
+    background: #dbeafe;
+
+    color: #2563EB;
+
+    border: none;
+
+    margin-right: 3px;
+}
+
+.btn-action-edit:hover {
+    background: #2563EB;
+
+    color: white;
+}
+
+.btn-action-delete {
+    background: #fee2e2;
+
+    color: #DC2626;
+
+    border: none;
+}
+
+.btn-action-delete:hover {
+    background: #DC2626;
+
+    color: white;
+}
+
+
+/* =========================================
+   FOOTER TABLE
+========================================= */
+
+.table-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 18px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.pagination .page-link {
+    color: #16A34A;
+
+    border-color: #e2e8f0;
+}
+
+.pagination .active .page-link {
+    background: #16A34A;
+
+    border-color: #16A34A;
+
+    color: white;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal-header {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-title {
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+.modal-body .form-label {
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.modal-body .form-control,
+.modal-body .form-select {
+    font-size: 13px;
+
+    height: 42px;
+}
+
+.modal-body .form-control:focus,
+.modal-body .form-select:focus {
+    border-color: #16A34A;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 163, 74, 0.08);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .table-toolbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .table-footer {
+        flex-direction: column;
+
+        gap: 12px;
+
+        align-items: flex-start;
+    }
+
+}
+
+/* État normal */
+.status-normal {
+    background-color: #d1fae5;
+    color: #047857;
+}
+
+/* Stock faible */
+.status-low {
+    background-color: #ffedd5;
+    color: #c2410c;
+}
+
+/* Rupture de stock */
+.status-out {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+/* Médicament périmé */
+.status-expired {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Péremption proche */
+.status-expiring {
+    background-color: #ede9fe;
+    color: #7c3aed;
+}
+
+/* Péremption à surveiller */
+.status-warning {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+/* =====================================================
+   PAGE STOCKS
+===================================================== */
+.form-control:focus {
+    border-color: #3011ab;
+
+    box-shadow: 0 1px 2px #ccc;
+
+}
+
+.card-body {
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.stock-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+
+/* Vert pharmacie */
+
+.stock-icon-green {
+    background: #e8f5e9;
+    color: #198754;
+}
+
+
+/* Normal */
+
+.stock-icon-normal {
+    background: #e8f5e9;
+    color: #198754;
+}
+
+
+/* Stock faible */
+
+.stock-icon-low {
+    background: #fff3cd;
+    color: #fd7e14;
+}
+
+
+/* Rupture */
+
+.stock-icon-danger {
+    background: #f8d7da;
+    color: #dc3545;
+}
+
+
+/* Tableau */
+
+#tableauStocks td,
+#tableauStocks th {
+    vertical-align: middle;
+}
+
+
+#tableauStocks tr:hover {
+    background-color: #f8faf9;
+}
+
+
+/* Badge états */
+
+.etat-normal {
+    background-color: #d1e7dd;
+    color: #198754;
+}
+
+
+.etat-faible {
+    background-color: #ffe5c2;
+    color: #fd7e14;
+}
+
+
+.etat-rupture {
+    background-color: #f8d7da;
+    color: #dc3545;
+}
+
+/* =========================================
+   COULEURS DES ÉTATS DU STOCK
+========================================= */
+
+.etat-normal {
+    background-color: #198754 !important;
+    color: #ffffff !important;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.etat-faible {
+    background-color: #fd7e14 !important;
+    color: #ffffff !important;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.etat-rupture {
+    background-color: #dc3545 !important;
+    color: #ffffff !important;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+body {
+    font-size: 14px;
+
+}
+
+/* ****************** */
+/* PAGE ALERTES */
+/* ********************* */
+/* Très peu de CSS : Bootstrap fait l'essentiel */
+
+.badge-alerte {
+    font-size: 0.78rem;
+    padding: 0.45rem 0.7rem;
+    border-radius: 50rem;
+}
+
+.page-alertes {
+    font-size: 0.9rem;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+/* =========================================
+   ÉTATS SUPPLÉMENTAIRES - PAGE STOCKS
+========================================= */
+
+.etat-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Médicament périmé : rouge foncé */
+.etat-perime {
+    background-color: #b91c1c !important;
+    color: #ffffff !important;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Péremption proche : violet */
+.etat-proche {
+    background-color: #7c3aed !important;
+    color: #ffffff !important;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* À surveiller : jaune/orange */
+.etat-surveiller {
+    background-color: #dbea08 !important;
+    color: #3b3d42 !important;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+/* =====================================================
+   PROFIL
+===================================================== */
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f5e9;
+    color: #198754;
+
+    font-size: 42px;
+
+    border: 4px solid #ffffff;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+
+.profile-info-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #f1f8f5;
+    color: #198754;
+
+    margin-right: 12px;
+
+    flex-shrink: 0;
+}
+
+
+.profile-info-icon i {
+    font-size: 16px;
+}
+
+
+.profile-avatar i {
+    font-size: 42px;
+}
